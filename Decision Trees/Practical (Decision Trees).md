@@ -103,8 +103,8 @@ def DecisionTreeTrain(data, goal, features):
       no = data[data[f] == False]
       yes = data[data[f] == True]
       features.remove(f)
-      left = DecisionTreeTrain(data = no, goal = goal, features = features, maxdepth=maxdepth)
-      right = DecisionTreeTrain(data = yes, goal = goal, features = features, maxdepth=maxdepth) 
+      left = DecisionTreeTrain(data = no, goal = goal, features = features)
+      right = DecisionTreeTrain(data = yes, goal = goal, features = features) 
       return Tree(data = f, left=left, right=right)   
 ```
 
