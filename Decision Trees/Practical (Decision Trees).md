@@ -153,4 +153,3 @@ def DecisionTreeTrain(data, goal, features, maxdepth = None):
       right = DecisionTreeTrain(data = yes, goal = goal, features = features, maxdepth=maxdepth)  
       return Tree(data = f, left=left, right=right) 
  ```
-![Performance](https://github.com/tatiana-iazykova/ML_NLP/blob/main/Decision%20Trees/maxdepth_vs_score1.png?raw=true)
