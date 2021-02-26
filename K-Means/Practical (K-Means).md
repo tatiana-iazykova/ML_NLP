@@ -237,7 +237,7 @@ plt.show()
 
 To see the results, consider the following part of the script
 
-```
+```python
 def crossval(data, splits, k, iter=100):
   cl = len(classif(data))/k
   num_points = int(cl/splits)
