@@ -16,7 +16,7 @@ def scatter_clusters(centers, spread, n_points):
 
 *For k=3, generate easy and hard problems and plot them; the easy problem might look like figure 3.13 from Daumé*
 
-To generate this graph see use the following part of the script.
+To generate this graph consider the following part of the script.
 ```python
 def classif(data):
 	""" unclusters data """
@@ -75,7 +75,7 @@ We return both clustered data and centroids in order to be able to classify data
 
 *Replot your problems at 5 stages (random initialisation, 25%, 50%, 75%, 100% of iterations), using colours to assign points to clusters.*
 
-To generate this graph see use the following part of the script.
+To generate this graph consider the following part of the script.
 
 ```python
 def plot_cluster(data, k=3):
