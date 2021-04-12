@@ -201,4 +201,33 @@ Graph the performance (computed by PerceptronTest) on both train and test sets v
 * random permutation at the beginning
 * random permutation at each epoch
 
+![graph1](https://raw.githubusercontent.com/tatiana-iazykova/ML_NLP/main/Perceptron/different_strategies.png)
 
+As you can see the performance of all algorithms is relatively similar.
+
+#### Task 6
+*Implement AveragedPerceptronTrain; using random permutation at each epoch, compare its performance with PerceptronTrain using the dataset from task 3.*
+
+```python
+def AveragedPerceptronTrain(D, maxiter = 100):
+  w = Vector.zero(len(D[0][0]))
+  b = Scalar(0)
+  u = Vector.zero(len(D[0][0]))
+  beta = Scalar(0)
+  c = Scalar(1)
+  for i in range(maxiter):
+    shuffle(D)
+    for x, y in D:
+      a = x*w + b
+      if (y*a).sign() <= 0: 
+        w += y*x
+        b += y
+        u += y*c*x
+        beta += y*c
+      c += Scalar(1)
+  return w-(Scalar(1)/c)*u, b-beta*(Scalar(1)/c)
+```
+![graph2](https://raw.githubusercontent.com/tatiana-iazykova/ML_NLP/main/Perceptron/averaged_perc.png)
+
+
+In comparison to the previous algorithm, this one shows drastically more stable performance
