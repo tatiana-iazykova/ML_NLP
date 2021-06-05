@@ -60,7 +60,7 @@ Use `scipy.optimize.minimize` with `jac=False` to implement support vector machi
 
 def svm(D, C=1):
   w = np.zeros(len(D[0][0]))
-  b = 0
+  b = np.array([0])
   func = lambda P: svm_loss(P, C=C, D=D)
   res = scipy.optimize.minimize(func, x0=np.concatenate([w,b]), jac=False).x
   opt_w = res[:-1]
