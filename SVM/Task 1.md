@@ -1,1 +1,1 @@
-1. The gradient is computed by the minimize function itself
+1. The gradient is computed by the minimize function itself if function is not provided, therefore the whole thing computes much faster, and if the funct is provided, then it is compute by the developer.
